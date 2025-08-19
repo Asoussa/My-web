@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Abdallah Mahmoud | Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(20, 20, 20, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(#e91e63, #4caf50);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+            /* Hover effect with rotation */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #4caf50;
+            font-weight: 600;
+        }
+
+        .resume-btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #e91e63;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #e91e63;
+            color: #fff;
+        }
+
+        /* Work Experience Section */
+        section#work-experience {
+            padding: 80px 10%;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #e91e63;
+        }
+
+        section#work-experience h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e91e63;
+            margin-bottom: 40px;
+        }
+
+        section#work-experience p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .job-experience {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .job-box {
+            background: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 30px;
+            width: 80%;
+            text-align: left;
+        }
+
+        .job-box h4 {
+            font-size: 1.6rem;
+            color: #e91e63;
+        }
+
+        .job-box p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+        .job-box .duration {
+            font-weight: 600;
+            color: #4caf50;
+        }
+
+        .job-box .role {
+            font-weight: 600;
+            color: #4caf50;
+        }
+
+        /* Footer */
+        footer {
+            background: #121212;
+            padding: 20px;
+            color: #bbb;
+            text-align: center;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+ /* Certificates Section */
+section#certificates {
+    padding: 80px 8%;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #ff007f;
+}
+
+section#certificates h2 {
+    font-size: 2.6rem; /* slightly bigger title */
+    font-weight: bold;
+    color: #ff007f;
+    margin-bottom: 40px;
+}
+
+section#certificates p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #bbb;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.certificates-container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* medium-large cards */
+    gap: 30px;
+    justify-items: center;
+}
+
+.cert-image {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 16px rgba(255, 0, 127, 0.25);
+    width: 100%;
+    max-width: 700px; /* moderate size */
+}
+
+.cert-image img {
+    width: 100%;
+    max-width: 650px; /* image slightly smaller than box */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.cert-image p {
+    font-size: 1.05rem;
+    color: #ddd;
+    margin-top: 8px;
+}
+
+.cert-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 45px rgba(255, 0, 127, 0.4);
+}
+/* ===== Base Section ===== */
+#work-experience{
+  padding:90px 8%;
+  background:#0f0f10;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+#work-experience h2{
+  font-size:2.8rem;
+  text-align:center;
+  margin:0 0 14px;
+  letter-spacing:.5px;
+}
+#work-experience p{
+  max-width:980px;
+  margin:0 auto 50px;
+  text-align:center;
+  color:#cfcfd4;
+  line-height:1.9;
+}
+#work-experience h2::after{
+  content:"";
+  display:block;
+  width:120px;height:3px;
+  margin:12px auto 0;
+  background:linear-gradient(90deg,#ff007f,#ff5fb7);
+  border-radius:2px;
+}
+
+/* ===== Timeline Rail (desktop) ===== */
+.job-experience{
+  position:relative;
+  display:grid;
+  gap:26px;
+}
+@media (min-width:900px){
+  .job-experience{
+    grid-template-columns:1fr 1fr;
+  }
+  .job-experience::before{
+    content:"";
+    position:absolute;
+    top:0;bottom:0;left:50%;
+    width:2px;transform:translateX(-50%);
+    background:linear-gradient(#3a3a3f,#ff007f,#3a3a3f);
+    opacity:.35;
+  }
+}
+
+/* ===== Card ===== */
+.job-box{
+  position:relative;
+  background:#1a1a1d;
+  border-radius:16px;
+  padding:26px 24px;
+  box-shadow:0 14px 32px rgba(0,0,0,.35);
+  border:1px solid #252529;
+  transition:transform .35s ease, box-shadow .35s ease;
+  isolation:isolate;
+}
+
+/* Pink glow border (subtle, on hover stronger) */
+.job-box::before{
+  content:"";
+  position:absolute;inset:-1px;
+  border-radius:18px;
+  background:conic-gradient(from 180deg,#ff007f33,transparent 25%,#ff007f22 50%,transparent 75%,#ff007f33);
+  filter:blur(12px);
+  opacity:.15;z-index:-1;
+  transition:opacity .35s ease, filter .35s ease;
+}
+.job-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 22px 48px rgba(255,0,127,.18), 0 10px 24px rgba(0,0,0,.45);
+}
+.job-box:hover::before{opacity:.35;filter:blur(16px);}
+
+/* Headings & meta */
+.job-title{
+  font-size:1.2rem;
+  margin:0 0 6px;
+  color:#ff5fb7;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+.meta{
+  display:flex;flex-wrap:wrap;gap:10px 14px;
+  margin:6px 0 10px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 10px;border-radius:999px;
+  font-size:.92rem;font-weight:600;
+  background:#161618;border:1px solid #2a2a2f;color:#eaeaf0;
+}
+.badge--time{ color:#7CFFA6;border-color:#2c5; }
+.badge--role{ color:#ffe680;border-color:#665300; }
+
+/* Body text */
+.job-desc{color:#d7d7dc;line-height:1.8;margin-top:8px;}
+.job-desc b{color:#fff;}
+.job-desc .accent{color:#ff92c6;}
+
+/* ===== Entrance Animation (stagger) ===== */
+.reveal{
+  opacity:0;transform:translateY(18px) scale(.98);
+  animation:revealUp .7s ease forwards;
+}
+.reveal:nth-child(1){animation-delay:.05s}
+.reveal:nth-child(2){animation-delay:.15s}
+.reveal:nth-child(3){animation-delay:.25s}
+.reveal:nth-child(4){animation-delay:.35s}
+.reveal:nth-child(5){animation-delay:.45s}
+
+@keyframes revealUp{
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* ===== Shine on hover (subtle) ===== */
+.job-box .shine{
+  position:absolute;inset:0;border-radius:16px;pointer-events:none;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.08) 50%,transparent 70%);
+  transform:translateX(-120%);transition:transform .6s ease;
+}
+.job-box:hover .shine{ transform:translateX(120%); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion:reduce){
+  .job-box,.job-box::before,.job-box:hover,.reveal{animation:none;transition:none;transform:none;opacity:1}
+}
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2 style="font-weight: 700;">AM</h2>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about me.html">About Me</a></li>
+            <li><a href="work-experience.html" class="active">Work Experience & Certificates </a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects & Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="d:\My-project\PORTIFOLIO\resume-data.docx" class="resume-btn">Resume</a>
+        <a href="https://github.com/Asoussa" class="resume-btn" target="_blank">GitHub</a>
+    </nav>
+
+    <!-- Work Experience Section -->
+<section id="work-experience">
+    <h2>Work Experience</h2>
+    <p>
+        I have gained diverse experience across data analytics, training, and business environments. 
+        Below are some of the most impactful roles I have held:
+    </p>
+
+    <div class="job-experience">
+
+        <!-- Job 1 -->
+        <article class="job-box" style="background:#2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <h4 style="color:#e91e63; margin-bottom:8px;">Data Analytics Instructor – LinkCU</h4>
+            <p class="duration" style="color:#4caf50; font-weight:bold; margin:4px 0;">Feb 2025 – Oct 2025</p>
+            <p class="role" style="color:#ffeb3b; font-weight:600; margin:4px 0;">Instructor & Mentor</p>
+            <p style="color:#ddd; margin-top:8px;">
+                Trained and mentored <b>100+ students</b> in <b>Python, SQL, Excel, and Power BI</b>. 
+                Designed and delivered <b>project-based lessons</b> on data cleaning, visualization, and machine learning fundamentals. 
+                Guided students in building <b>interactive dashboards, predictive models, and business insights</b>, 
+                helping them strengthen both technical and analytical skills.
+            </p>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="job-box" style="background:#2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <h4 style="color:#e91e63; margin-bottom:8px;">Data Analyst Intern – Global Appraisal Tech (GAT)</h4>
+            <p class="duration" style="color:#4caf50; font-weight:bold; margin:4px 0;">Jun 2025 – Jul 2025</p>
+            <p class="role" style="color:#ffeb3b; font-weight:600; margin:4px 0;">Internship</p>
+            <p style="color:#ddd; margin-top:8px;">
+                Worked on <b>real-world business datasets</b> by performing <b>data cleaning, preprocessing, and statistical analysis</b>.  
+                Built <b>interactive dashboards in Power BI</b> to deliver actionable insights that supported data-driven decision-making.  
+            </p>
+        </article>
+
+        <!-- Job 3 -->
+        <article class="job-box" style="background:#2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <h4 style="color:#e91e63; margin-bottom:8px;">National Telecommunication Institute (NTI)</h4>
+            <p class="duration" style="color:#4caf50; font-weight:bold; margin:4px 0;">Aug 2025 – Sep 2025</p>
+            <p class="role" style="color:#ffeb3b; font-weight:600; margin:4px 0;">Scholarship Trainee</p>
+            <p style="color:#ddd; margin-top:8px;">
+                Selected for a <b>competitive scholarship program</b> at NTI, specializing in <b>Python, SQL, Excel, and Power BI</b>.  
+                Applied <b>machine learning techniques</b> such as regression, clustering, and sales forecasting to real-world datasets.  
+                Strengthened practical expertise in <b>data preprocessing, visualization, and predictive analytics</b>.  
+            </p>
+        </article>
+
+        <!-- Job 4 -->
+        <article class="job-box" style="background:#2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <h4 style="color:#e91e63; margin-bottom:8px;">Data Analyst Specialization (DAS) – DEPI Program</h4>
+            <p class="duration" style="color:#4caf50; font-weight:bold; margin:4px 0;">Oct 2024 – May 2025</p>
+            <p class="role" style="color:#ffeb3b; font-weight:600; margin:4px 0;">Trainee | Ministry of Communications (MCIT)</p>
+            <p style="color:#ddd; margin-top:8px;">
+                Completed an <b>intensive government-sponsored training</b> in <b>Python, SQL, Excel, and Power BI</b>.  
+                Worked on <b>hands-on projects</b> involving data cleaning, interactive dashboards, and predictive modeling.  
+                Strengthened skills in <b>applied data science</b> for solving real-world business problems.  
+            </p>
+        </article>
+
+        <!-- Job 5 -->
+        <article class="job-box" style="background:#2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <h4 style="color:#e91e63; margin-bottom:8px;">CIB Bank – Business Intern</h4>
+            <p class="duration" style="color:#4caf50; font-weight:bold; margin:4px 0;">Aug 2024 – Sep 2024</p>
+            <p class="role" style="color:#ffeb3b; font-weight:600; margin:4px 0;">SAS Certified | Internship</p>
+            <p style="color:#ddd; margin-top:8px;">
+                Developed <b>business and analytical skills</b> through exposure to banking operations, 
+                financial data handling, and <b>SAS-based analysis</b>.  
+                Supported teams in leveraging data for <b>strategic and operational insights</b>.  
+            </p>
+        </article>
+
+    </div>
+</section>
+
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <p class="cert-intro">Here are some of the certificates I’ve earned in data analysis, business systems, and related fields.</p>
+
+  <div class="certificates-container">
+    <h3 class="cert-title">All Certificates</h3>
+
+    <div class="image-grid">
+      <div class="cert-image">
+        <img src="./Screenshot 2025-08-06 215653.png" alt="GAT Certificate">
+        <p>GAT Certificate</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-08-06 220313.png" alt="DEPI Certificate">
+        <p>DEPI Certificate</p>
+      </div>
+      <div class="cert-image">
+        <img src="./WhatsApp Image 2025-06-19 at 02.34.12_8e99d198.jpg" alt="SAS Certificate">
+        <p>SAS Certificate</p>
+      </div>
+      <div class="cert-image">
+        <img src="./WhatsApp Image 2025-06-19 at 02.34.12_8e2ed0fa.jpg" alt="LinkedIn Certificate">
+        <p>LinkedIn Certificate</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-19 023319.png" alt="SQL Intermediate">
+        <p>Intermediate SQL</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-19 023200.png" alt="SQL Introduction">
+        <p>Introduction to SQL</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-19 023132.png" alt="Power BI Introduction">
+        <p>Introduction to Power BI</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-18 222054.png" alt="Joining Data in SQL">
+        <p>Joining Data in SQL</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-17 033636.png" alt="CIB Phase 2">
+        <p>CIB Phase 2</p>
+      </div>
+      <div class="cert-image">
+        <img src="./WhatsApp Image 2025-06-19 at 02.34.11_3cfa27dc.jpg" alt="CIB Final">
+        <p>Final CIB Certificate</p>
+      </div>
+      <div class="cert-image">
+        <img src="./Screenshot 2025-06-17 022820.png" alt="EBSM Bank Masr">
+        <p>EBSM Bank Masr</p>
+      </div>
+      <div class="cert-image">
+        <img src="./WhatsApp Image 2025-06-19 at 02.34.11_9400ecb8.jpg" alt="Frankfurt School">
+        <p>Frankfurt School</p>
+      </div>
+    </div>
+
+    <p class="issuer">Issued by SAS Institute & Other Institutions</p>
+    <p class="date">2023 - 2025</p>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Abdallah Mahmoud. Built with ❤ and code. <a href="contact.html">Contact Me</a></p>
+    </footer>
+
+
+
+</body>
+
+</html>

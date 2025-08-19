@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Abdallah Mahmoud | Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Po.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(20, 20, 20, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e91e63;
+        }
+/* Service Images */
+.service-img {
+    width: 100%;  /* Make the image fit within its container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image fills the area without distortion */
+    border-radius: 8px; /* Optionally add rounded corners */
+    margin-top: 20px; /* Add space above the image */
+}
+.pr-img {
+    width: 100%;  /* Make the image fit within its container */
+    height: 500px; /* Set a fixed height */ /* Ensure the image fills the area without distortion */
+    border-radius: 8px; /* Optionally add rounded corners */
+    margin-top: 2px; /* Add space above the image */
+}
+
+        .resume-btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #e91e63;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #e91e63;
+            color: #fff;
+        }
+
+          /* Circle around the logo (AM) */
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient( #e91e63, #4caf50);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        .logo:hover {
+            transform: rotate(360deg); /* Hover effect with rotation */
+        }
+      
+        
+        /* Projects Section */
+        section#projects {
+            padding: 80px 10%;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #e91e63;
+        }
+
+        section#projects h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e91e63;
+            margin-bottom: 40px;
+        }
+
+        section#projects p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Project Box */
+        .project-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 30px;
+            width: 80%;
+            text-align: left;
+        }
+
+        .project-card h4 {
+            font-size: 1.6rem;
+            color: #e91e63;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+        .project-card .tools {
+            font-weight: 600;
+            color: #4caf50;
+        }
+
+        /* Services Offered Section */
+        section#services {
+            background: #2a2a2a;
+            padding: 60px 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        section#services h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #e91e63;
+            margin-bottom: 40px;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #333;
+            border-radius: 10px;
+            padding: 30px;
+            width: 25%;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h4 {
+            font-size: 1.6rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+
+        /* Footer */
+        footer {
+            background: #121212;
+            padding: 20px;
+            color: #bbb;
+            text-align: center;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+    
+.projects {
+  padding: 80px 10%;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: #2a2a2a;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 320px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #444;
+}
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.project-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* Fade-in Up Animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.fade-in-up');
+  function checkScroll() {
+    elements.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        setTimeout(() => el.classList.add('show'), index * 200);
+      }
+    });
+  }
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
+});
+</script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2>AM</h2>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about me.html">About Me</a></li>
+            <li><a href="work-experience.html">Work Experience & Certificates</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects & Service-Offer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="d:\My-project\PORTIFOLIO\resume-data.docx" class="resume-btn">Resume</a>
+        <a href="https://github.com/Asoussa" class="resume-btn" target="_blank">GitHub</a>
+
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+           </div>
+         <div class="image-container">
+        <img src=".\images.png" alt="Abdallah Mahmoud" class="profile-image">
+        </div>
+
+        <p>Explore the various data analysis and visualization projects I have worked on. Below are some key examples of my work.</p>
+
+        <div style="display: flex; justify-content: space-between; gap: 20px; width: 100%; flex-wrap: wrap;">
+                    <!-- Project 3 -->
+ <a href="https://github.com/AbdelmenamAdel/LinkedIn-Job-Posts-Insights-NTI" 
+   target="_blank" 
+   style="color: #e91e63; text-decoration: none; font-weight: bold; width: 48%;">
+    <div style="background: #2a2a2a; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px; width: 100%;">
+        
+        <img src="./Screenshot 2025-08-18 101132.png" 
+             alt="LinkedIn Job Posts Insights Project" 
+             style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+        
+        <h4 style="color: #e91e63; margin: 10px 0;">LinkedIn Job Posts Insights</h4>
+        
+        <!-- Tools Section  -->
+        <div style="margin: 10px 0;">
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Python</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Pandas</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Matplotlib</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Scikit-learn</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Label Encoding</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Power BI</span>
+        </div>
+        
+        <p style="color: #bbb; margin: 5px 0;">
+            Performed job market analysis using LinkedIn posts. This project involved 
+            data cleaning, transformation, and applying machine learning techniques 
+            (encoding & clustering). Built interactive dashboards in Power BI to 
+            visualize insights and support decision-making.
+        </p>
+        
+        <p style="color: #e91e63; font-weight: bold; margin-top: 10px;">
+            CLICK HERE TO VIEW FULL PROJECT ON GITHUB
+        </p>
+    </div>
+ </a>  
+
+<!-- Project 2 -->
+<a href="https://github.com/Asoussa/UK-BANK-ANALYSIS.git" 
+   target="_blank" 
+   style="color: #e91e63; text-decoration: none; font-weight: bold; width: 48%;">
+    <div style="background: #2a2a2a; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px; width: 100%;">
+        
+        <img src="./Screenshot 2025-01-06 040251.png" 
+             alt="UK-BANK Analysis" 
+             style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+        
+        <h4 style="color: #e91e63; margin: 10px 0;">UK Bank Analysis</h4>
+        
+        <!-- Tools Section -->
+        <div style="margin: 10px 0;">
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Python</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Pandas</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Matplotlib</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">SQL</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Power BI</span>
+        </div>
+        
+        <p style="color: #bbb; margin: 5px 0;">
+            Analyzed UK banking data using Python, SQL, and Power BI. 
+            This project focused on data cleaning, transformation, 
+            and building interactive dashboards to uncover performance insights. 
+            SQL was used for extraction, Python for analysis, and Power BI for visualization.
+        </p>
+        
+        <p style="color: #e91e63; font-weight: bold; margin-top: 10px;">
+            CLICK HERE TO VIEW FULL PROJECT ON GITHUB
+        </p>
+    </div>
+</a>
+
+<!-- Project 4 -->
+<a href="https://github.com/Asoussa/Tesco-Supermarket-Sales-Analysis.gits" 
+   target="_blank" 
+   style="color: #e91e63; text-decoration: none; font-weight: bold; width: 48%;">
+    <div style="background: #2a2a2a; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px; width: 100%;">
+        
+        <img src="./Screenshot 2025-08-16 083936.png" 
+             alt="Tesco Supermarket Sales Analysis" 
+             style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+        
+        <h4 style="color: #e91e63; margin: 10px 0;">Tesco Supermarket Sales Analysis</h4>
+        
+        <!-- Tools Section -->
+        <div style="margin: 10px 0;">
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Python</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Pandas</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Scikit-learn</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">K-Means</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Linear Regression</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Power BI</span>
+        </div>
+        
+        <p style="color: #bbb; margin: 5px 0;">
+            Cleaned and analyzed Tesco sales data, applied Linear Regression for 
+            revenue prediction and K-Means for customer clustering. 
+            Built dashboards to visualize sales trends and achieved 
+            a target revenue analysis of 1.4M.
+        </p>
+        
+        <p style="color: #e91e63; font-weight: bold; margin-top: 10px;">
+            CLICK HERE TO VIEW FULL PROJECT ON GITHUB
+        </p>
+    </div>
+</a>
+
+
+  <!-- Project 1 -->
+<a href="https://github.com/Asoussa/REAL-ESTATE-COLDWELL.git" 
+   target="_blank" 
+   style="color: #e91e63; text-decoration: none; font-weight: bold; width: 48%;">
+    <div style="background: #2a2a2a; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px; width: 100%;">
+        
+        <img src="./Screenshot 2025-01-06 034721.png" 
+             alt="Real-Estate Data Analysis" 
+             style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+        
+        <h4 style="color: #e91e63; margin: 10px 0;">Real-Estate Data Analysis</h4>
+        
+        <!-- Tools Section -->
+        <div style="margin: 10px 0;">
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Python</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Pandas</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Matplotlib</span>
+            <span style="background:#4caf50; color:#fff; padding:5px 10px; border-radius:6px; font-size:12px; margin:2px; display:inline-block;">Power BI</span>
+        </div>
+        
+        <p style="color: #bbb; margin: 5px 0;">
+            Analyzed real estate sales data to identify trends, create reports, 
+            and make recommendations for improving strategies. 
+            This project included data cleaning, transformation, 
+            and building dashboards for insights.
+        </p>
+        
+        <p style="color: #e91e63; font-weight: bold; margin-top: 10px;">
+            CLICK HERE TO VIEW FULL PROJECT ON GITHUB
+        </p>
+    </div>
+</a>
+
+        </div>
+    
+    </section>
+
+    <!-- Services Offered Section -->
+    <section id="services">
+        <h3>Services Offered</h3>
+        <p>Here are the key services I offer as a data analyst. These services can help you make data-driven decisions and improve your business strategies.</p>
+
+        <div class="service-box">
+          <!-- Service 1 -->
+        <div class="service-card">
+    <h4>Data Analysis</h4>
+    <p>In-depth analysis of your data to provide actionable insights and help drive strategic decisions.</p>
+    <br>
+    <img src="./Service1.jpg" alt="Data Analysis" class="service-img">
+        </div>
+
+<!-- Service 2 -->
+<div class="service-card">
+    <h4>Data Visualization</h4>
+    <p>Creating clear and impactful data visualizations to communicate complex information effectively.</p>
+    <img src="Service2.jpg" alt="Data Visualization" class="service-img">
+</div>
+
+<!-- Service 3 -->
+<div class="service-card">
+    <h4>Reporting & Dashboards</h4>
+    <p>Developing automated reports and dashboards to monitor key metrics and business performance.</p>
+    <img src="./Service3.jpg" alt="Reporting & Dashboards" class="service-img">
+</div>
+
+           <style>
+.profile-image {
+    width: 120px;   /* adjust size */
+    height: 120px;
+    border-radius: 50%;   /* makes it circular */
+    object-fit: cover;
+    border: 2px solid #e91e63; /* optional pink border to match theme */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* optional shadow */
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+</style>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Abdallah Mahmoud. Built with ❤ and code. <a href="contact.html">Contact Me</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Abdallah Mahmoud | Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(20, 20, 20, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e91e63;
+        }
+
+        .resume-btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #e91e63;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #e91e63;
+            color: #fff;
+        }
+
+        /* About Section */
+        section#about {
+            padding: 80px 10%;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #e91e63;
+        }
+
+        section#about h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e91e63;
+            margin-bottom: 40px;
+        }
+
+        section#about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        section#about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Key Skills Section */
+        .key-skills {
+            padding: 60px 10%;
+            background: #222;
+            text-align: center;
+        }
+
+        .key-skills h3 {
+            color: #e91e63;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+ .image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-image {
+        width: 150px; /* Set the desired size */
+        height: 150px; /* Ensure height and width are equal to make it circular */
+        border-radius: 50%; /* This makes the image circular */
+        object-fit: cover; /* Ensures the image fits well without distortion */
+        border: 5px solid #e91e63; /* Optional: Adds a border around the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+    }
+
+    /* General Contact Section Styles */
+    section#contact {
+        padding: 80px 10%;
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        border-bottom: 2px solid #e91e63;
+    }
+
+    section#contact h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #e91e63;
+        margin-bottom: 40px;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+
+    .contact-info .info-box {
+        background: #2a2a2a;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 30%;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .contact-info .info-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .contact-info .info-box i {
+        font-size: 3rem;
+        color: #e91e63;
+        margin-bottom: 20px;
+    }
+
+    .contact-info .info-box p {
+        font-size: 1.1rem;
+        color: #bbb;
+    }
+
+    .contact-form {
+        background: #2a2a2a;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-form h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #e91e63;
+        margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        background: #121212;
+        border: 1px solid #444;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+    .contact-form button {
+        padding: 15px 30px;
+        background: #e91e63;
+        border: none;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+        background: #4caf50;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-image {
+        width: 150px; /* Set the desired size */
+        height: 150px; /* Ensure height and width are equal to make it circular */
+        border-radius: 50%; /* This makes the image circular */
+        object-fit: cover; /* Ensures the image fits well without distortion */
+        border: 5px solid #e91e63; /* Optional: Adds a border around the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+    }
+
+ 
+
+
+
+
+        .skill-box {
+            margin: 10px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .skill-box h4 {
+            color: #4caf50;
+        }
+
+        .skill-box p {
+            color: #bbbbbb;
+        }
+
+        /* Footer */
+        footer {
+            background: #121212;
+            padding: 20px;
+            color: #bbb;
+            text-align: center;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(#e91e63, #4caf50);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg); /* Hover effect with rotation */
+            }
+            .key-skills {
+  background: #111;   /* dark background */
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.key-skills h3 {
+  text-align: center;
+  font-size: 28px;
+  color: #ff4081;  /* pink accent for title */
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-box {
+  background: #1c1c1c;   /* dark gray cards */
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s, background 0.3s, border 0.3s;
+  border: 1px solid transparent;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  border: 1px solid #ff4081;   /* pink border on hover */
+  background: #2a2a2a;
+}
+
+.skill-box h4 {
+  color: #ff4081;  /* pink headers */
+  margin-bottom: 10px;
+}
+
+.skill-box p {
+  color: #eee;   /* light gray text */
+  font-size: 14px;
+}
+
+.skill-box img {
+  width: 80px;       /* make them bigger */
+  height: 80px;
+  margin: 15px auto;
+  display: block;
+  object-fit: cover; /* keeps proportions and fills box */
+  border-radius: 10px; /* optional: rounded edges */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2>AM</h2>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about me.html">About Me</a></li>
+            <li><a href="work-experience.html">Work Experience&Certificates</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects&Service-Offer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="d:\My-project\PORTIFOLIO\resume-data.docx" class="resume-btn">Resume</a>
+        <a href="https://github.com/Asoussa" class="resume-btn" target="_blank">GitHub</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="./Neutral Pink Modern Circle Shape LinkedIn Profile Picture (2).png" alt="Abdallah Mahmoud">
+ 
+        <p>Hello! I'm <span style="color: #e91e63; font-weight: 600;">Abdallah Mahmoud</span> a passionate
+
+            <span style="color: #4caf50;">Data Analyst</span>, who believes every dataset hides a human story.I love turning raw numbers into clear insights that help businesses grow and people make better decisions. With a strong foundation in data visualization, statistical analysis
+           , I bring both technical expertise and a problem-solving mindset to every project.
+        </p>
+        <p>Over the past few years, I've worked on various projects that allowed me to explore diverse datasets, design interactive dashboards, 
+            . My goal is to always stay curious, learn new skills, and make a positive impact through the power of data.</p>
+    </section>
+<!-- Key Skills Section -->
+<div class="key-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-container">
+         <div class="skill-box">
+      <h4>Data Analysis</h4>
+      <img src="download.jpeg" alt="Data Analysis Icon">
+      <p>Python • Excel • SQL • MySQL </p>
+      
+    </div>
+        <div class="skill-box">
+            <h4>Visualization</h4>
+            <img src="images (1).jpeg" alt="Data Analysis Icon">
+            <p>Power BI, Tableau, Excel</p>
+        </div>
+        <div class="skill-box">
+            <h4>Data Cleaning & Preprocessing</h4>
+            <img src="download.png" alt="Data Analysis Icon">
+            <p>Handling missing values, transforming data, normalization, etc.</p>
+        </div>
+          <div class="skill-box">
+            <h4>AI & Machine Learning</h4>
+            <img src="imagers.jpeg" alt="Data Analysis Icon">
+            <p>Regression & Classification Models, Clustering (K-Means), Sales Prediction, Model Evaluation (R², RMSE, Silhouette Score)</p>
+        </div>
+        <div class="skill-box">
+            <h4>Trend & Statistical Analysis</h4>
+            <img src="images (2).jpeg" alt="Data Analysis Icon">
+            <p>Analyzing trends, hypothesis testing, regression analysis</p>
+        </div>
+      
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Abdallah Mahmoud. Built with ❤ and code. <a href="contact.html">Contact Me</a></p>
+    </footer>
+</body>
+</html>
